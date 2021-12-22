@@ -3,7 +3,7 @@ import { Context as AuthContext } from "../contexts/AuthContext";
 
 export default function ResolveAuthScreen() {
 
-    const { tryLocalSignin } = React.createContext(AuthContext);
+    const { tryLocalSignin } = React.useContext(AuthContext);
 
     useEffect(() => {
         tryLocalSignin();
